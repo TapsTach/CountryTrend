@@ -1,12 +1,12 @@
 {
-  "cacheBootResources": false,
+  "cacheBootResources": true,
   "config": [ ],
   "debugBuild": false,
   "entryAssembly": "CountriTrend",
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "CountriTrend.dll": "sha256-HO\/zSXV6mnCZ41dEbBABhg4icGh1DQsqt3CJuHtgdbk=",
+      "CountriTrend.dll": "sha256-QizJwIDMGRhgkVbedFThQjfMmhSRlgrv+MAei3Kiq60=",
       "System.Net.Http.Json.dll": "sha256-99dseBOagY3mzu5Y8Eqm8gRI+o8QbbCp7R2Ew9bQ+5E=",
       "System.Buffers.dll": "sha256-ZxXy75PYbzJxNfAc\/SAP1nUYm4gt1jSaOpFnBb9m85M=",
       "mscorlib.dll": "sha256-BaZPMj95+YNe3G4ckTGD6szZFwZeA2MOHn91zTGKDeU=",
