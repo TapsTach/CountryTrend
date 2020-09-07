@@ -9,13 +9,13 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <title>Countri Trend</title>
     <link rel='dns-prefetch' href='//fonts.googleapis.com'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel='dns-prefetch' href='//s.w.org'>
     <link rel="alternate" type="application/rss+xml" title="Voice &raquo; Feed" href="index.rss?feed=rss2">
-    <link rel="alternate" type="application/rss+xml" title="Voice &raquo; Comments Feed"
-          href="index-1.rss?feed=comments-rss2">
-    <link rel="alternate" type="application/rss+xml" title="Voice &raquo; Layouts Comments Feed"
-          href="index-3.rss?feed=rss2&#038;page_id=231">
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <!--<link rel="alternate" type="application/rss+xml" title="Voice &raquo; Comments Feed"
+          href="index-1.rss?feed=comments-rss2">-->
+    <!--<link rel="alternate" type="application/rss+xml" title="Voice &raquo; Layouts Comments Feed"
+          href="index-3.rss?feed=rss2&#038;page_id=231">-->
     <style type="text/css">
         img.wp-smiley,
         img.emoji {
@@ -59,25 +59,34 @@
     <script>
         $(document).ready(function () {
             setInterval(function () {
-                var date = new Date();
+                if (changeTime) {
 
-                document.getElementById("time-div").innerHTML =
-                    twoDigitString(date.getDate())
-                    + " " +
-                    getMonthString(date.getMonth())
-                    + " " +
-                    date.getFullYear()
-                    + "  " +
-                    twoDigitString(date.getHours())
-                    + "." +
-                    twoDigitString(date.getMinutes())
-                    + ":" +
-                    twoDigitString(date.getSeconds())
-                    + " " +
-                    getPMAM(date.getHours());
+                    var date = new Date();
+
+                    document.getElementById("time-div").innerHTML =
+                        twoDigitString(date.getDate())
+                        + " " +
+                        getMonthString(date.getMonth())
+                        + " " +
+                        date.getFullYear()
+                        + "  " +
+                        twoDigitString(date.getHours())
+                        + "." +
+                        twoDigitString(date.getMinutes())
+                        + ":" +
+                        twoDigitString(date.getSeconds())
+                        + " " +
+                        getPMAM(date.getHours());
+                }
             }, 1000);
-        });
+        }); 
 
+        function setDate(date) {
+            changeTime = false;
+            document.getElementById("time-div").innerHTML = date;
+        }
+
+        var changeTime = true;
         function twoDigitString(number) {
             if (number < 10) {
                 return '0' + number.toString();
@@ -113,8 +122,8 @@
     </script>
 
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>-->
 </body>
 
 </html>
