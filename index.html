@@ -59,7 +59,8 @@
     <script>
         $(document).ready(function () {
             setInterval(function () {
-                if (changeTime) {
+
+                try {
 
                     var date = new Date();
 
@@ -69,10 +70,13 @@
                         getMonthString(date.getMonth())
                         + " " +
                         date.getFullYear()
-                       
+
+                }
+                catch (ex) {
+
                 }
             }, 1000);
-        }); 
+        });
 
         function setDate(date) {
             changeTime = false;
